@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="homeStyle.css" />
+  <title>Justiça Trabalhista Fácil - Home</title>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="header-left">
+      <button id="menu-btn" class="icon-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="header-center">
+      <h1 class="app-title">Justiça Trabalhista Fácil</h1>
+    </div>
+    <div class="header-right">
+      <button id="profile-btn" class="icon-btn">
+        <i class="fas fa-user-circle"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Lateral (Drawer) -->
+  <nav id="side-menu" class="side-menu">
+    <button id="close-menu-btn" class="close-menu-btn">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul>
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fas fa-info-circle"></i> Sobre</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i> Contato</a></li>
+      <!-- Adicione mais itens conforme necessário -->
+    </ul>
+  </nav>
+
+  <!-- Modal de Perfil -->
+  <div id="profile-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Perfil do Usuário</h2>
+      <p>Nome: João Silva</p>
+      <p>Email: joao.silva@example.com</p>
+      <!-- Adicione mais informações conforme necessário -->
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <!-- Botão para Preencher o Formulário -->
+    <section class="form-section">
+      <button id="fill-form-btn" class="btn primary-btn">
+        <i class="fas fa-file-alt"></i> Preencher Formulário
+      </button>
+    </section>
+
+    <!-- Seção de Artigos -->
+    <section class="articles-section">
+      <h2>Base de Conhecimento</h2>
+      <div class="articles-container">
+        <!-- Artigo 1 -->
+        <div class="article-card">
+          <h3>Direitos Trabalhistas Básicos</h3>
+          <p>Conheça os direitos fundamentais dos trabalhadores no Brasil.</p>
+          <button class="read-more-btn">Ler Mais</button>
+        </div>
+        <!-- Artigo 2 -->
+        <div class="article-card">
+          <h3>Jornada de Trabalho</h3>
+          <p>Entenda as normas sobre a jornada de trabalho conforme a CLT.</p>
+          <button class="read-more-btn">Ler Mais</button>
+        </div>
+        <!-- Artigo 3 -->
+        <div class="article-card">
+          <h3>Salário Mínimo</h3>
+          <p>Saiba como o salário mínimo é calculado e atualizado.</p>
+          <button class="read-more-btn">Ler Mais</button>
+        </div>
+        <!-- Adicione mais artigos conforme necessário -->
+      </div>
+    </section>
+
+    <!-- Seção de Advocacias Parceiras -->
+    <section class="lawfirms-section">
+      <h2>Advocacias Parceiras</h2>
+      <div class="lawfirms-container">
+        <!-- Advocacia 1 -->
+        <div class="lawfirm-card">
+          <h3>Advocacia Silva & Associados</h3>
+          <p>Especialistas em direito trabalhista com mais de 20 anos de experiência.</p>
+          <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+          <p><i class="fas fa-envelope"></i> contato@silvaassociados.com.br</p>
+        </div>
+        <!-- Advocacia 2 -->
+        <div class="lawfirm-card">
+          <h3>Consultoria Jurídica Oliveira</h3>
+          <p>Atuação destacada em casos de conformidade e compliance trabalhista.</p>
+          <p><i class="fas fa-phone"></i> (21) 2345-6789</p>
+          <p><i class="fas fa-envelope"></i> oliveira@consultjuridica.com.br</p>
+        </div>
+        <!-- Advocacia 3 -->
+        <div class="lawfirm-card">
+          <h3>Escritório Legal Gomes</h3>
+          <p>Foco em defesa dos direitos dos trabalhadores e negociação de contratos.</p>
+          <p><i class="fas fa-phone"></i> (31) 3456-7890</p>
+          <p><i class="fas fa-envelope"></i> gomes@escritoriodlegal.com.br</p>
+        </div>
+        <!-- Adicione mais advocacias conforme necessário -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Opcional) -->
+  <footer class="footer">
+    <p>&copy; 2024 Justiça Trabalhista Fácil. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+/* homeStyle.css */
+
+/* Importando a fonte Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.header .app-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+
+/* Menu Lateral (Drawer) */
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  padding: 15px 20px;
+}
+
+.side-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.side-menu ul li a i {
+  margin-right: 10px;
+}
+
+.side-menu.open {
+  width: 250px;
+}
+
+/* Botão de Fechar Menu Lateral */
+.close-menu-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.close-menu-btn:focus {
+  outline: none;
+}
+
+/* Modal de Perfil */
+.modal {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+  z-index: 1200; /* Acima do menu */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Habilita scroll se necessário */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% do topo e centralizado horizontalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 400px; /* Largura máxima */
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  padding: 100px 20px 20px 20px; /* Espaço para o cabeçalho fixo */
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.primary-btn {
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  border: none;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.primary-btn i {
+  margin-right: 10px;
+}
+
+.primary-btn:hover {
+  background-color: #4d84e2;
+}
+
+/* Seção de Artigos */
+.articles-section {
+  margin-bottom: 30px;
+}
+
+.articles-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.article-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.article-card p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.read-more-btn {
+  background-color: #fff;
+  border: 2px solid #5995fd;
+  color: #5995fd;
+  padding: 8px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #5995fd;
+  color: #fff;
+}
+
+/* Seção de Advocacias Parceiras */
+.lawfirms-section {
+  margin-bottom: 30px;
+}
+
+.lawfirms-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.lawfirms-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lawfirm-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lawfirm-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.lawfirm-card p {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.lawfirm-card i {
+  margin-right: 5px;
+  color: #5995fd;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+  .articles-container,
+  .lawfirms-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .article-card,
+  .lawfirm-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 570px) {
+  .header .app-title {
+    font-size: 1.2rem;
+  }
+
+  .primary-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .article-card,
+  .lawfirm-card {
+    flex: 1 1 100%;
+  }
+
+  /* Ajustes para o botão de fechar no menu lateral em telas menores */
+  .close-menu-btn {
+    font-size: 1.3rem;
+    top: 10px;
+    right: 15px;
+  }
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .modal-content p {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6; /* Melhor espaçamento entre linhas */
+  }
+  
+  .modal-content ul {
+    margin-left: 20px; /* Recuo para listas */
+    color: #555;
+  }
+  
+  .modal-content li {
+    margin-bottom: 8px; /* Espaçamento entre itens da lista */
+  }

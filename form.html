@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="formStyle.css" />
+  <title>Justiça Trabalhista Fácil - Formulário</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <!-- Formulário de Multi-etapas -->
+        <form id="multi-step-form" class="multi-step-form">
+          <!-- Sessão 1: Informações Pessoais -->
+          <div class="form-step active">
+            <h2 class="title">Informações Pessoais</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="nome-completo" placeholder="Nome Completo" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-briefcase"></i>
+              <input list="cargos" id="cargo" placeholder="Selecione seu Cargo" required />
+              <datalist id="cargos">
+                <option value="Analista de Sistemas"></option>
+                <option value="Assistente Administrativo"></option>
+                <option value="Desenvolvedor de Software"></option>
+                <option value="Designer Gráfico"></option>
+                <option value="Engenheiro de Software"></option>
+                <option value="Gerente de Projetos"></option>
+                <option value="Analista de Marketing"></option>
+                <option value="Vendedor"></option>
+                <option value="Operador de Máquinas"></option>
+                <option value="Contador"></option>
+                <option value="Técnico de TI"></option>
+                <option value="Técnico de Suporte"></option>
+                <option value="Enfermeiro"></option>
+                <option value="Médico"></option>
+                <option value="Recepcionista"></option>
+                <option value="Professor"></option>
+                <option value="Advogado"></option>
+                <option value="Arquiteto"></option>
+                <!-- Adicione mais opções conforme necessário -->
+              </datalist>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-file-contract"></i>
+              <select id="tipo-contrato" required>
+                <option value="" disabled selected>Tipo de Contrato de Trabalho</option>
+                <option value="CLT">CLT</option>
+                <option value="Temporário">Temporário</option>
+                <option value="Autônomo">Autônomo</option>
+                <option value="Outros">Outros</option>
+              </select>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn next-btn">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Sessão 2: Horário de Trabalho -->
+          <div class="form-step">
+            <h2 class="title">Horário de Trabalho</h2>
+            <div class="input-field">
+              <i class="fas fa-clock"></i>
+              <input type="number" id="horas-semana" placeholder="Horas Semanais" required min="1" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-hourglass-half"></i>
+              <input type="number" id="carga-diaria" placeholder="Carga Horária Diária" required min="1" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-restroom"></i>
+              <select id="descanso-semanal" required>
+                <option value="" disabled selected>Descanso Semanal</option>
+                <option value="1">Sim, 1 dia</option>
+                <option value="2">Sim, 2 dias</option>
+                <option value="0">Não</option>
+              </select>
+            </div>
+            <div class="input-field switch-field">
+              <label for="horas-extras">Horas Extras Trabalhadas:</label>
+              <input type="checkbox" id="horas-extras" />
+              <label for="horas-extras" class="modern-checkbox"></label>
+            </div>
+            <div class="input-field extra-hours-field" style="display: none;">
+              <i class="fas fa-plus-circle" style="margin-right: 8px;"></i>
+              <input type="number" id="quantidade-extras" placeholder="Horas extras por semana" min="0" />
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn prev-btn">Anterior</button>
+              <button type="button" class="btn next-btn">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Sessão 3: Benefícios -->
+          <div class="form-step">
+            <h2 class="title">Benefícios</h2>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="beneficios" value="Vale-Transporte" /> Vale-Transporte</label>
+              <label><input type="checkbox" name="beneficios" value="Vale-Alimentação" /> Vale-Alimentação</label>
+              <label><input type="checkbox" name="beneficios" value="Plano de Saúde" /> Plano de Saúde</label>
+              <label><input type="checkbox" name="beneficios" value="13º Salário" /> 13º Salário</label>
+              <label><input type="checkbox" name="beneficios" value="Férias" /> Férias</label>
+              <label><input type="checkbox" name="beneficios" value="Outros" /> Outros</label>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn prev-btn">Anterior</button>
+              <button type="button" class="btn next-btn">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Sessão 4: Salário e Pagamentos -->
+          <div class="form-step">
+            <h2 class="title">Salário e Pagamentos</h2>
+            <div class="input-field">
+              <i class="fas fa-money-bill-wave"></i>
+              <select id="frequencia-pagamento" required>
+                <option value="" disabled selected>Frequência de Pagamento</option>
+                <option value="Mensal">Mensal</option>
+                <option value="Quinzenal">Quinzenal</option>
+                <option value="Semanal">Semanal</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-dollar-sign"></i>
+              <input type="number" id="salario-recebido" placeholder="Salário Recebido" required min="1" />
+            </div>
+            <div class="input-field switch-field">
+              <label for="assinatura-ct">Assinatura de Carteira de Trabalho:</label>
+              <input type="checkbox" id="assinatura-ct" />
+              <label for="assinatura-ct" class="modern-checkbox"></label>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn prev-btn">Anterior</button>
+              <button type="button" class="btn next-btn">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Sessão 5: Condições de Trabalho -->
+          <div class="form-step">
+            <h2 class="title">Condições de Trabalho</h2>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="condicoes" value="Segurança Adequada" /> Segurança Adequada</label>
+              <label><input type="checkbox" name="condicoes" value="EPIs Fornecidos" /> EPIs Fornecidos</label>
+              <label><input type="checkbox" name="condicoes" value="Ambiente Seguro" /> Ambiente Seguro</label>
+              <label><input type="checkbox" name="condicoes" value="Ambiente com Riscos de Acidentes" /> Ambiente com
+                Riscos de Acidentes</label>
+              <label><input type="checkbox" name="condicoes" value="Outros" /> Outros</label>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn prev-btn">Anterior</button>
+              <button type="button" class="btn next-btn">Próximo</button>
+            </div>
+          </div>
+
+          <!-- Sessão 6: Revisão e Submissão -->
+          <div class="form-step">
+            <h2 class="title">Revisão e Submissão</h2>
+            <div class="review">
+              <!-- Resumo das informações será preenchido via JavaScript -->
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn prev-btn">Anterior</button>
+              <button type="submit" class="btn">Enviar Formulário</button>
+            </div>
+          </div>
+
+          <!-- Sessão 7: Resultados da Análise -->
+          <div class="form-step">
+            <h2 class="title">Resultados da Análise</h2>
+            <div id="resultado-analisado" class="resultado-analisado">
+              <!-- As conclusões serão preenchidas via JavaScript -->
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn prev-btn">Anterior</button>
+              <button type="button" class="btn" id="contact-lawfirms-btn">Advocacias
+                Parceiras</button>
+            </div>
+          </div>
+
+          <!-- Modal para as Advocacias Parceiras -->
+          <div id="lawfirms-modal" class="modal">
+            <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <h2>Advocacias Parceiras</h2>
+              <div class="lawfirm-list">
+                <!-- Lista de advocacias será preenchida via JavaScript -->
+                <!-- Exemplo de uma advocacia -->
+                <!--
+      <div class="lawfirm">
+        <h3>Nome da Advocacia</h3>
+        <p>Descrição ou especialidade da advocacia.</p>
+        <button class="send-form-btn" data-email="contato@advocacia1.com">Enviar Formulário</button>
+      </div>
+      -->
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Justiça Trabalhista Fácil</h3>
+          <p>Formulário para análise de conformidade trabalhista</p>
+        </div>
+        <img src="img/log.svg" class="image" alt="" />
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>É um de nós?</h3>
+          <p>Faça login para continuar.</p>
+          <button class="btn transparent" id="sign-in-btn">
+            Entrar
+          </button>
+        </div>
+        <img src="img/register.svg" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <a href="home.html" class="home-icon" title="Voltar para a Home">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
